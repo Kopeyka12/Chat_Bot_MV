@@ -36,6 +36,7 @@
             // 
             // textBox_report
             // 
+            this.textBox_report.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.textBox_report.Location = new System.Drawing.Point(12, 21);
             this.textBox_report.Multiline = true;
             this.textBox_report.Name = "textBox_report";
@@ -47,6 +48,7 @@
             // 
             // textBox_request
             // 
+            this.textBox_request.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.textBox_request.Location = new System.Drawing.Point(12, 395);
             this.textBox_request.Multiline = true;
             this.textBox_request.Name = "textBox_request";
@@ -57,7 +59,7 @@
             // 
             this.button_enter.Location = new System.Drawing.Point(704, 395);
             this.button_enter.Name = "button_enter";
-            this.button_enter.Size = new System.Drawing.Size(75, 23);
+            this.button_enter.Size = new System.Drawing.Size(94, 23);
             this.button_enter.TabIndex = 2;
             this.button_enter.Text = "Отправить";
             this.button_enter.UseVisualStyleBackColor = true;
@@ -67,7 +69,7 @@
             // 
             this.button_clear.Location = new System.Drawing.Point(704, 357);
             this.button_clear.Name = "button_clear";
-            this.button_clear.Size = new System.Drawing.Size(75, 23);
+            this.button_clear.Size = new System.Drawing.Size(94, 23);
             this.button_clear.TabIndex = 3;
             this.button_clear.Text = "Удалить";
             this.button_clear.UseVisualStyleBackColor = true;
@@ -77,13 +79,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = global::Chat_Bot_MV.Properties.Resources.Зернистый_фон_градиент;
+            this.ClientSize = new System.Drawing.Size(822, 453);
             this.Controls.Add(this.button_clear);
             this.Controls.Add(this.button_enter);
             this.Controls.Add(this.textBox_request);
             this.Controls.Add(this.textBox_report);
+            this.KeyPreview = true;
             this.Name = "Form_main";
             this.Text = "Чат-Бот";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form_main_KeyDown_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

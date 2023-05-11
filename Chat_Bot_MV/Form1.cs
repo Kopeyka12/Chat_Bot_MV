@@ -35,5 +35,15 @@ namespace Chat_Bot_MV
                 Hide(); /// Скрываем первое
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_login_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

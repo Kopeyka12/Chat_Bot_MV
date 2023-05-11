@@ -73,7 +73,7 @@ namespace Chat_Bot_MV
             try
             {
                 // Попытка загрузки существующей базы
-                history.AddRange(File.ReadAllLines(path, Encoding.GetEncoding(1251)));
+                history.AddRange(File.ReadAllLines(path, Encoding.GetEncoding(1251)));  //считывет с файла данные и сразу же закрывает
 
                 // Если файл был изменен не сегодня, то записываеося новая дата
 
@@ -88,7 +88,7 @@ namespace Chat_Bot_MV
             catch
             {
                 // если файл не существует, создаем его
-                File.WriteAllLines(path, history.ToArray(), Encoding.GetEncoding(1251));
+                File.WriteAllLines(path, history.ToArray(), Encoding.GetEncoding(1251));    //создает файл и записывет из значение history
                 // отмечаем дату начала переписки
                 String[] date = new String[] {"Переписка от " +
                         DateTime.Now.ToString("dd.MM.yy") + "\n"};
@@ -100,7 +100,7 @@ namespace Chat_Bot_MV
         public void AddToHistory(string[] answer) /// Добавление в историю
         {
             history.AddRange(answer);
-            //открывается файл, загружается исторя и сразу же закрывается
+            //открывается файл, загружается история и сразу закрывает файл
             File.WriteAllLines(path, history.ToArray(), Encoding.GetEncoding(1251));  //лучше так не делать изменить на универсальную кодировку
         }
 
@@ -129,8 +129,13 @@ namespace Chat_Bot_MV
         }
 
         public string GetIP() /// Получение IP
-        {
+        {   //host — это один определенный компьютер или сервер, подключенный к конкретной сети
+            //IP-адрес — это уникальный адрес одной конкретной компьютерной сети.
+            //Сначала обращаемся к директиве System.Net, то есть подключаемся к сетевым протоколам
+            //Пишем ".Dns" этот классом мы говорим, что хотим обратиться к определенному протоколу — протоколу IP.
+            //Затем пишем GetHostName. Переводится как «Получить имя хоста», что нам и нужно
             String host = System.Net.Dns.GetHostName();/// Получение ip-адреса
+            //Дело в том, что чтобы нам получить IP-адрес, нужно указать сначала его хост, что мы и делаем, указывая имя нашего хоста в скобках переменной host 
             System.Net.IPAddress ip = System.Net.Dns.GetHostByName(host).AddressList[0];
             return ip.ToString();
         }

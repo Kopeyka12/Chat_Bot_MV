@@ -76,6 +76,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +90,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Зернистый фон градиент.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Red-black, gradient, glow, abstract, 1080x2160 wallpaper.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Зернистый фон градиент1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fundo da parede de textura de cimento azul escuro _ Foto Premium.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

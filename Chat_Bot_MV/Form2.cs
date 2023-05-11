@@ -32,13 +32,13 @@ namespace Chat_Bot_MV
         }
 
 
-        private void Form_main_KeyDown(object sender, KeyEventArgs e) /// Регистрация нажатия Enter
+       /* private void Form_main_KeyDown(object sender, KeyEventArgs e) /// Регистрация нажатия Enter
         {
             if (e.KeyValue == (char)Keys.Enter)
             {
                 button_enter_Click_1(button_enter, null);
             }
-        }
+        }*/
 
         /// Если вторая форма закрыта
         private void Form_main_FormClosed(object sender, FormClosedEventArgs e)
@@ -108,6 +108,14 @@ namespace Chat_Bot_MV
             textBox_report.SelectionStart = textBox_report.Text.Length;
             textBox_report.ScrollToCaret();
             textBox_report.Refresh();
+        }
+
+        private void Form_main_KeyDown_1(object sender, KeyEventArgs e)/// Регистрация нажатия Enter
+        {
+            if (e.KeyValue == (char)Keys.Enter)
+            {
+                button_enter_Click_1(button_enter, null);
+            }
         }
     }
 }
