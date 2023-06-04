@@ -18,8 +18,9 @@ namespace Chat_Bot_MV
         string path; /// Путь к файлу с историей сообщений
 
         List<string> history = new List<string>(); /// Хранение истории
-
+        //static- бужет сылаться на одну облость памяти при создании нового объекта
         /// Регулярные выражения
+        // @ ставиться перед "..." что бы не икренировал ее в строку
         public static Regex regexHello = new Regex(@"(^(пр(и|e)в)е*т|х(а|e)*й|hi|hello*)");
         public static Regex regexThankYou = new Regex(@"(?:спасибо|благодарю)");
         public static Regex regexDate = new Regex(@"(число$|дата|дату)");
@@ -128,7 +129,7 @@ namespace Chat_Bot_MV
             return "Сейчас: " + DateTime.Now.ToString("HH:mm");
         }
 
-        public string GetIP() /// Получение IP
+        public string GetIP() /// Получение ЛОКАЛЬНЫЙ IP
         {   //host — это один определенный компьютер или сервер, подключенный к конкретной сети
             //IP-адрес — это уникальный адрес одной конкретной компьютерной сети.
             //Сначала обращаемся к директиве System.Net, то есть подключаемся к сетевым протоколам

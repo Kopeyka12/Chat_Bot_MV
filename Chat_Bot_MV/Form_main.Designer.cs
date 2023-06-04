@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_main));
             this.textBox_report = new System.Windows.Forms.TextBox();
             this.textBox_request = new System.Windows.Forms.TextBox();
             this.button_enter = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@
             this.Controls.Add(this.button_enter);
             this.Controls.Add(this.textBox_request);
             this.Controls.Add(this.textBox_report);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Form_main";
             this.Text = "Чат-Бот";
