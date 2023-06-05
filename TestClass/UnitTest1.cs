@@ -48,7 +48,7 @@ namespace TestClass
             Assert.AreEqual(1.3333, float.Parse(cb.Answer("раздели 12 на 9")), 0.0001);
             Assert.AreEqual(4.0, float.Parse(cb.Answer("раздели 100 на 25")), 0.0001);
 
-            Assert.AreEqual("Я вас не понимаю :(", cb.Answer("zdgfsdg"));
+            Assert.AreEqual("Я вас не понимаю :(", cb.Answer("Поставьте 3 за экзамен пожайлуста"));
         }
     }
 }
